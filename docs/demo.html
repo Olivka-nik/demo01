@@ -1,150 +1,55 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
   <title>Dachshund Haven</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    :root{
-      --bg:#0b1220;
-      --card:#111a2e;
-      --text:#e9eefc;
-      --muted:#b7c2e6;
-      --accent:#ffcc66;
-      --accent2:#7dd3fc;
-      --shadow: 0 12px 30px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 1100px;
-    }
-    *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1100px 600px at 20% 0%, rgba(125,211,252,.16), transparent 60%),
-        radial-gradient(900px 500px at 80% 10%, rgba(255,204,102,.14), transparent 55%),
-        linear-gradient(180deg, #070b14, var(--bg));
+      font-family:system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:#0b1220;
+      color:#e9eefc;
     }
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max);margin:0 auto;padding:28px 18px 60px;}
-
-    /* HEADER */
+    .wrap{max-width:1100px;margin:auto;padding:24px}
     header{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:18px;
-      padding-bottom:28px;
-    }
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
+      margin-bottom:24px;
     }
     .logo{
-      width:44px;
-      height:44px;
-      border-radius:14px;
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      display:grid;
-      place-items:center;
-      font-size:22px;
-      box-shadow:var(--shadow);
+      font-size:26px;
+      font-weight:700;
     }
-    nav{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-    .chip{
-      padding:10px 14px;
-      border-radius:999px;
-      background:rgba(17,26,46,.6);
-      border:1px solid rgba(233,238,252,.15);
-      color:var(--muted);
-      font-size:14px;
-    }
-    .chip:hover{color:var(--text)}
-
-    /* HERO */
     .hero{
       display:grid;
-      grid-template-columns:1.15fr .85fr;
-      gap:18px;
+      grid-template-columns:1.2fr .8fr;
+      gap:20px;
     }
-    @media (max-width:900px){
+    @media(max-width:900px){
       .hero{grid-template-columns:1fr}
     }
     .card{
-      background:rgba(17,26,46,.62);
-      border:1px solid rgba(233,238,252,.14);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
+      background:#111a2e;
+      border-radius:18px;
+      padding:22px;
     }
-    .hero-left{padding:26px}
-    .kicker{
-      display:inline-block;
-      padding:8px 14px;
-      border-radius:999px;
-      background:rgba(255,204,102,.15);
-      color:var(--accent);
-      font-size:14px;
-      margin-bottom:14px;
-    }
-    h1{margin:0 0 12px;font-size:42px}
-    .sub{color:var(--muted);max-width:60ch}
-    .cta{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
-    .btn{
-      padding:12px 16px;
-      border-radius:14px;
-      border:1px solid rgba(233,238,252,.16);
-      background:rgba(255,255,255,.06);
-      font-weight:600;
-    }
-    .btn.primary{
-      background:linear-gradient(135deg,var(--accent),var(--accent2));
-      color:#111a2e;
-      border:none;
-    }
-
-    .hero-right{
-      position:relative;
-      min-height:360px;
-    }
-    .hero-right img{
+    h1{margin-top:0;font-size:40px}
+    .hero img{
       width:100%;
       height:100%;
       object-fit:cover;
+      border-radius:18px;
     }
-    .overlay{
-      position:absolute;
-      inset:0;
-      background:linear-gradient(180deg,rgba(11,18,32,.1),rgba(11,18,32,.75));
-    }
-    .badge{
-      position:absolute;
-      left:16px;
-      bottom:16px;
-      padding:10px 14px;
-      border-radius:14px;
-      background:rgba(17,26,46,.8);
-      border:1px solid rgba(233,238,252,.14);
-      font-size:14px;
-    }
-
-    /* SECTIONS */
-    section{margin-top:28px}
-    h2{margin-top:0}
-
+    section{margin-top:30px}
     .gallery{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:14px;
     }
-    @media (max-width:800px){
+    @media(max-width:800px){
       .gallery{grid-template-columns:1fr}
     }
     .gallery img{
@@ -152,20 +57,13 @@
       height:220px;
       object-fit:cover;
       border-radius:16px;
-      border:1px solid rgba(233,238,252,.14);
     }
-    .caption{
-      margin-top:8px;
-      color:var(--muted);
-      font-size:14px;
-    }
-
     footer{
       margin-top:40px;
-      padding-top:18px;
-      border-top:1px solid rgba(233,238,252,.12);
-      font-size:13px;
-      color:rgba(233,238,252,.55);
+      padding-top:20px;
+      border-top:1px solid #2a3558;
+      font-size:14px;
+      opacity:.7;
       display:flex;
       justify-content:space-between;
       flex-wrap:wrap;
@@ -175,67 +73,75 @@
 </head>
 
 <body>
-  <div class="wrap">
+<div class="wrap">
 
-    <!-- HEADER -->
-    <header>
-      <div class="brand">
-        <div class="logo">🐾</div>
-        <div>
-          <b>Dachshund Haven</b><br>
-          <span style="color:var(--muted);font-size:13px;">уютный сайт для любителей такс</span>
-        </div>
-      </div>
-      <nav>
-        <a class="chip" href="#about">О сайте</a>
-        <a class="chip" href="#gallery">Галерея</a>
-        <a class="chip" href="#tips">Советы</a>
-      </nav>
-    </header>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">🐾 Dachshund Haven</div>
+    <div>сайт про такс</div>
+  </header>
 
-    <!-- HERO -->
-    <main class="hero">
-      <div class="card hero-left">
-        <div class="kicker">🐶 Маленькие лапки — большое сердце</div>
-        <h1>Мир такс, где каждый хвостик — история</h1>
-        <p class="sub">
-          Советы по уходу, идеи прогулок и галерея такс,
-          которые поднимают настроение за пару секунд.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="#gallery">Смотреть галерею</a>
-          <a class="btn" href="#tips">Быстрые советы</a>
-        </div>
-      </div>
-
-      <div class="card hero-right">
-        <img
-          src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1600&q=80"
-          alt="Такса крупным планом">
-        <div class="overlay"></div>
-        <div class="badge">
-          <b>Такса дня 🐾</b><br>
-          Самая харизматичная
-        </div>
-      </div>
-    </main>
-
-    <!-- ABOUT -->
-    <section id="about" class="card" style="padding:20px">
-      <h2>О сайте</h2>
-      <p style="color:var(--muted)">
-        Dachshund Haven — место для тех, кто обожает такс:
-        уход, прогулки и немного ежедневного счастья 🐶
+  <!-- HERO -->
+  <div class="hero">
+    <div class="card">
+      <h1>Мир такс</h1>
+      <p>
+        Маленькие лапки, длинная спина и огромное сердце.
+        Здесь живёт любовь к таксам 🐶
       </p>
-    </section>
+    </div>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="card" style="padding:20px">
-      <h2>Мини-галерея</h2>
-      <div class="gallery">
-        <figure>
-          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80" alt="Такса спит">
-          <div class="caption">Сон</div>
-        </figure>
-        <figure>
-          <img src="https://
+    <div>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Dachshund_smooth-haired.jpg"
+        alt="Такса">
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="card">
+    <h2>Почему таксы — лучшие</h2>
+    <ul>
+      <li>Смелые</li>
+      <li>Умные</li>
+      <li>Очень верные</li>
+      <li>Смешные каждый день</li>
+    </ul>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="card">
+    <h2>Галерея такс</h2>
+    <div class="gallery">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/3/32/Dachshund_in_snow.jpg"
+        alt="Такса в снегу">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/1/16/Dachshund_playing.jpg"
+        alt="Такса играет">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Dachshund_red.jpg"
+        alt="Рыжая такса">
+    </div>
+  </section>
+
+  <!-- TIPS -->
+  <section class="card">
+    <h2>Советы владельцу</h2>
+    <ul>
+      <li>Прогулки 2–3 раза в день</li>
+      <li>Не давать прыгать с высоты</li>
+      <li>Следить за весом</li>
+      <li>Любить без ограничений ❤️</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>© 2026 Dachshund Haven</div>
+    <div>Сделано с любовью 🐾</div>
+  </footer>
+
+</div>
+</body>
+</html>
